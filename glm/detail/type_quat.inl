@@ -150,12 +150,8 @@ namespace detail
 	{}
 
 	template <typename T, qualifier Q>
-	GLM_CONSTEXPR qua<T, Q> qua<T, Q>::wxyz(T w, T x, T y, T z) {
-#	ifdef GLM_FORCE_QUAT_DATA_XYZW
-		return qua<T, Q>(x, y, z, w);
-#	else
-		return qua<T, Q>(w, x, y, z);
-#	endif
+	GLM_CONSTEXPR qua<T, Q> qua<T, Q>::wxyz(T a, T b, T c, T d) {
+		return qua<T, Q>(a, b, c, d);
 	}
 	
 	// -- Conversion constructors --
